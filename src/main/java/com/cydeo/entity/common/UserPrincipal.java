@@ -31,7 +31,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public String getPassword() {
-        return this.user.getPassWord();   //how i can acccess to password field of the user object
+        return this.user.getPassWord();   //how I can access to password field of the user object
     }
 
     @Override
@@ -58,5 +58,10 @@ public class UserPrincipal implements UserDetails {
     public boolean isEnabled() {
         return this.user.isEnabled();
     }
+
+    public Long getId(){
+        return this.user.getId();
+    }
+
 
 }
