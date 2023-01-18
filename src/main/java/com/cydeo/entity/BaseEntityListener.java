@@ -1,7 +1,6 @@
 package com.cydeo.entity;
 
 import com.cydeo.entity.common.UserPrincipal;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,6 +12,7 @@ import java.time.LocalDateTime;
 
 @Component
 public class BaseEntityListener extends AuditingEntityListener {
+
 
     @PrePersist
     private void onPrePersist(BaseEntity baseEntity){
@@ -29,7 +29,6 @@ public class BaseEntityListener extends AuditingEntityListener {
         }
     }
 
-
     @PreUpdate
     private void onPreUpdate(BaseEntity baseEntity){
 
@@ -42,7 +41,6 @@ public class BaseEntityListener extends AuditingEntityListener {
             baseEntity.setLastUpdateUserId( ((UserPrincipal) principal).getId());
         }
     }
-
 
 
 

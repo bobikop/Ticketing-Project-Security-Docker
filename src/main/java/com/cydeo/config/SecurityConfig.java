@@ -30,14 +30,14 @@ public class SecurityConfig {
     }
 
 
-
+// hardcoded user for class purpose
     //    @Bean
 //    public UserDetailsService userDetailsService(PasswordEncoder encoder){
 //
 //        List<UserDetails> userList = new ArrayList<>();
 //
 //        userList.add(
-//                new User("mike",encoder.encode("password"), Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN")))
+//                new User("mike",encoder.encode("abc1"), Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN")))
 //        );
 //
 //        userList.add(
@@ -88,6 +88,4 @@ public class SecurityConfig {
                 .and()
                 .build();
     }
-
-
 }

@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+// spring work with User class and the fields inside so we make a contract with it by using UserDetails interface
 public class UserPrincipal implements UserDetails {
 
     private User user;

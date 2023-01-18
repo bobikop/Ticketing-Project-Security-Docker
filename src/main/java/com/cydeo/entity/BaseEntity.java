@@ -28,10 +28,4 @@ public class BaseEntity {
     @Column(nullable = false)
     private Long lastUpdateUserId;
 
-
-
-
-
-
-
 }

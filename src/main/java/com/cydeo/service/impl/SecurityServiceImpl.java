@@ -21,7 +21,6 @@ public class SecurityServiceImpl implements SecurityService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         User user = userRepository.findByUserNameAndIsDeleted(username,false);
-
         if(user==null){
             throw new UsernameNotFoundException(username);
         }

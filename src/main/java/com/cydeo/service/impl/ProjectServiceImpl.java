@@ -98,7 +98,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public List<ProjectDTO> listAllProjectDetails() {
-
+         // Security will bring information form the user who is login
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         UserDTO currentUserDTO = userService.findByUserName(username);
