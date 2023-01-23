@@ -54,3 +54,4 @@ workflows:
       - deploy-job:
           requires:
             - docker-image-and-publish
+
